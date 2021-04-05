@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#2B2B2B"
+    android:background="#9DC6D8"
     tools:context=".MainActivity">
 
     <TextView
@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Floating action button"
-        android:textColor="#E5FB07"
+        android:textColor="#1D4E89"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -28,10 +28,10 @@
         android:layout_marginEnd="24dp"
         android:layout_marginRight="24dp"
         android:layout_marginBottom="24dp"
-        android:onClick="t"
         android:clickable="true"
         android:focusable="true"
-        app:backgroundTint="#E5FB07"
+        android:tint="@android:color/white"
+        app:backgroundTint="#1d4e89"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/ic_addicon" />
@@ -43,7 +43,9 @@
         android:layout_marginBottom="16dp"
         android:clickable="true"
         android:focusable="true"
+        android:tint="@android:color/white"
         android:visibility="invisible"
+        app:backgroundTint="#00B3CA"
         app:layout_constraintBottom_toTopOf="@+id/add"
         app:layout_constraintEnd_toEndOf="@+id/add"
         app:srcCompat="@drawable/ic_editicon" />
@@ -55,7 +57,9 @@
         android:layout_marginBottom="16dp"
         android:clickable="true"
         android:focusable="true"
+        android:tint="#FFFFFF"
         android:visibility="invisible"
+        app:backgroundTint="#00B3CA"
         app:layout_constraintBottom_toTopOf="@+id/edit"
         app:layout_constraintEnd_toEndOf="@+id/edit"
         app:srcCompat="@drawable/ic_imageicon" />

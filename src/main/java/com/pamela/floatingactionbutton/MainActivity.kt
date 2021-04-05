@@ -24,14 +24,14 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         add.setOnClickListener {
-onAddButtonClicked()
+            onAddButtonClicked()
         }
         edit.setOnClickListener {
             Toast.makeText(this,"Edit Button Clicked",Toast.LENGTH_LONG).show()
 
         }
         image.setOnClickListener {
-            Toast.makeText(this, "Image BUtton Clicked",Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "Image Button Clicked",Toast.LENGTH_LONG).show()
 
         }
 
@@ -42,7 +42,19 @@ onAddButtonClicked()
     private fun onAddButtonClicked() {
         setVisibility(clicked)
         setAnimation(clicked)
+        setClickable(clicked)
         clicked = !clicked
+    }
+
+    private fun setClickable(clicked: Boolean) {
+        if(!clicked){
+            edit.isClickable=true
+            image.isClickable=true
+        }
+        else{
+            edit.isClickable=false
+            image.isClickable=false
+        }
     }
 
     private fun setVisibility(clicked:Boolean) {
@@ -64,9 +76,9 @@ onAddButtonClicked()
             add.startAnimation(rotateopen)
         }
         else{
-            edit.startAnimation(frombottom)
-            image.startAnimation(frombottom)
-            add.startAnimation(rotateopen)
+            edit.startAnimation(toBottom)
+            image.startAnimation(toBottom)
+            add.startAnimation(rotateclose)
 
         }
     }
